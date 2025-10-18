@@ -1,0 +1,23 @@
+header {
+    padding: 20px;
+}
+
+.logo-div {
+    display:inline-block;
+    float:left;
+}
+
+.menu-div {
+    display:inline-block;
+    float:right;
+}
+
+.menu_button_container {
+  display: flex; 
+}
+
+.menu_button {
+  padding: 20px;
+  background-color: #910c00;
+  color:white;
+}
