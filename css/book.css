@@ -1,23 +1,39 @@
-header {
-    padding: 20px;
+#actionButtons label.active {
+  background: #910c00;
+  border-color:#910c00
+}
+#actionButtons label {
+  border-color:#910c00
 }
 
-.logo-div {
-    display:inline-block;
-    float:left;
-}
 
-.menu-div {
-    display:inline-block;
-    float:right;
-}
 
-.menu_button_container {
-  display: flex; 
+#bookCarousel img {
+  height:350px;
+  object-fit: cover;
+  filter: brightness(0.4)
 }
-
-.menu_button {
-  padding: 20px;
+#bookCarousel button {
   background-color: #910c00;
   color:white;
+}
+#bookCarousel p {
+  color:#d1d1d1
+
+}
+
+
+form {
+  background-color: #910c00;
+  color:white;
+}
+
+
+.card img{
+  height:200px;
+  object-fit: cover;
+}
+.card {
+  background:#910c00!important;
+  color:white!important;
 }
