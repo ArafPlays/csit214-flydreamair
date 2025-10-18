@@ -1,50 +1,234 @@
 <!DOCTYPE html>
 <html>
     <head>
-         <meta charset="UTF-8">
+        <meta charset="UTF-8">
+        <!-- Page title-->
         <title>FlyDreamAir Booking Page</title>
+        <!-- Custom CSS stylesheet-->
         <link rel="stylesheet" type="text/css" href="css/book.css">
+        <!-- open source Bootstrap V5 CSS framework linked with cdn -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     </head>
     <body>
-        <header>
-            <div class="logo-div">
-                <img src="media/fda logo white bg dark red.png" width="200px" alt = "flydreamair logo"/>
+        <!-- top navigation bar -->
+        <nav id="book-nav" class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="media/fda logo white bg dark red.png" width="200px"/>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Top Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sign Up</a>
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+        <!-- top action buttons (Book, manage, check-in, status)-->
+        <section id="actionButtons">
+            <div class="btn-group d-flex justify-content-center" role="group">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                <label class="btn btn-outline-danger rounded-0 active" for="btnradio1">Book</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-danger rounded-0" for="btnradio2">Manage</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                <label class="btn btn-outline-danger rounded-0" for="btnradio3">Check-in</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                <label class="btn btn-outline-danger rounded-0" for="btnradio4">Flight Status</label>
+            </div>
+       </section>
+        
+
+       <!-- banner photo with text and button -->
+        <section id="bookCarousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="media/book-banner.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption mt-3 d-block">
+                        <h1 class="display-3 mt-4 secondary"><b>Experience Hospitality</b> Like Never Before</h1>
+                        <button class="btn px-4 py-2 fs-5 mt-4">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+        
+        <!-- flight booking form -->
+        <form class="container mt-sm-5 px-md-5 px-4 py-5 mb-3">
+            <h2 class="display-5 mb-4">Where do you want to go?</h2>
+            <div class="row">
+                <div class="col-md mb-3">
+                    <label class="form-label">From</label>
+                    <select class="form-select">
+                        <option value="1">Sydney</option>
+                        <option value="2">Dhaka</option>
+                        <option value="3">Beijing</option>
+                        <option value="4">Colombo</option>
+                    </select>
+                </div>
+
+                <div class="col-md mb-3">
+                    <label class="form-label">To</label>
+                    <select class="form-select">
+                        <option value="2">Dhaka</option>
+                        <option value="3">Beijing</option>
+                        <option value="4">Colombo</option>
+                        <option value="1">Sydney</option>
+                    </select>
+                </div>
+
+                <div class="col mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Depart Date</label>
+                    <input type="date" class="form-control">
+                </div>
+
+                <div class="col mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Return Date</label>
+                    <input type="date" class="form-control" >
+                </div>
+
             </div>
 
-            <div class="menu-div">
-                <a>Promotions</a>
-                <a>Contact</a>
-                <a>Login</a>
+            <div class="row">
+                <div class="col mb-3">
+                    <label class="form-label">Class</label>
+                    <select class="form-select">
+                        <option value="1">Economy</option>
+                        <option value="2">Business</option>
+                        <option value="3">First</option>
+                    </select>
+                </div>
+
+                <div class="col mb-3">
+                    <label class="form-label">Passengers</label>
+                    <input type="number" class="form-control">
+                </div>
+
+
+                <div class="col-md mb-3 mt-3 align-self-end">
+                    <button type="submit" class="btn btn-outline-light w-100"><b>SEARCH</b></button>
+                </div>
             </div>
-        </header>
-
-        <!-- menu -->
-        <div class="menu_button_container">
-            <a><h3 class="menu_button">Book a flight</h2></a>
-            <a></a><h3 class="menu_button">Manage Booking</h2></a>
-            <a></a><h3 class="menu_button">Check-in</h2></a>
-            <a></a><h3 class="menu_button">Flight Status</h2></a>
-        </div>
-        
-        
-        <div>
-            <img src="media/homepage banner let your dreams take flight.png" width="600px" alt = "homepage banner"/>
-        </div>
-        
-
-        
-
-        <form>
-            <h1>Where would you like to go?</h1>
-            <p>From</p>
-            <p>To</p>
-            <p>Depart date</p>
-            <p>Return date</p>
-            <p>Class</p>
-            <p>Passengers</p>
-            <p>Apply promo code</p>
-            <button>Search</button>
         </form>
-        <p>Log in to your account to unlock personalised deals, privileges and more. Not a member? Sign up now.</p>
+
+
+
+        <!-- top destinations cards -->
+        <section id="topDestinations" class="container px-md-5 px-4 py-5">
+            <div class="row">
+                <h2 class="display-5 mb-5">Top Destinations</h2>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="card">
+                    <img src="media/sydney.jpg" class="card-img-top">
+                    <div class="card-body mx-2">
+                        <h5 class="card-title">Sydey</h5>
+                        <p class="card-text">Starts from $1300</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="card">
+                        <img src="media/dhaka.jpg" class="card-img-top">
+                    <div class="card-body mx-2">
+                        <h5 class="card-title">Dhaka</h5>
+                        <p class="card-text">Starts from $1300</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="card">
+                        <img src="media/beijing.png" class="card-img-top">
+                    <div class="card-body mx-2">
+                        <h5 class="card-title">Beijing</h5>
+                        <p class="card-text">Starts from $1300</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="card">
+                        <img src="media/colombo.jpg" class="card-img-top">
+                    <div class="card-body mx-2">
+                        <h5 class="card-title">Colombo</h5>
+                        <p class="card-text">Starts from $1300</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- frequenty asked questions section -->
+        <section class="container px-md-5 px-4 py-3">
+            <h2 class="display-5 mb-5">Frequenty Asked Questions</h2>
+            <div class="accordion mb-5" id="faq">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        How much baggage can I carry?
+                    </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        In addition to the free cabin baggage allowance, the passenger may carry ONE of these personal items below free of charge (either option A, B or C) and all the combined items (as a total) must be within the maximum weight of the cabin baggage allowance stated.
+                    </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Are there any service fees for booking?
+                    </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        In addition to the free cabin baggage allowance, the passenger may carry ONE of these personal items below free of charge (either option A, B or C) and all the combined items (as a total) must be within the maximum weight of the cabin baggage allowance stated                    </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        What are the cancellation fees?
+                    </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        In addition to the free cabin baggage allowance, the passenger may carry ONE of these personal items below free of charge (either option A, B or C) and all the combined items (as a total) must be within the maximum weight of the cabin baggage allowance stated                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- footer with logo and copyright message-->
+        <footer class="bg-body-tertiary text-center text-lg-start">
+            <div class="text-center p-3 mt-4" style="background-color:#910c00; color:white;">
+                <img src="media/fda logo white.png" width="200px"/>
+                © All Rights Reserved
+            </div>
+        </footer>
+
+
+        <!-- open source Bootstrap JS framework linked with CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 </html>
