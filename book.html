@@ -28,9 +28,6 @@
                         <a class="nav-link" href="#">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#">Login</a>
                     </li>
                     <li class="nav-item">
@@ -74,37 +71,37 @@
     
         
         <!-- flight booking form -->
-        <form class="container mt-sm-5 px-md-5 px-4 py-5 mb-3">
+        <form id="searchForm" class="container mt-sm-5 px-md-5 px-4 py-5 mb-3">
             <h2 class="display-5 mb-4">Where do you want to go?</h2>
             <div class="row">
                 <div class="col-md mb-3">
                     <label class="form-label">From</label>
-                    <select class="form-select">
-                        <option value="1">Sydney</option>
-                        <option value="2">Dhaka</option>
-                        <option value="3">Beijing</option>
-                        <option value="4">Colombo</option>
+                    <select class="form-select" id="locationFrom">
+                        <option value="Sydney">Sydney</option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Beijing">Beijing</option>
+                        <option value="Colombo">Colombo</option>
                     </select>
                 </div>
 
                 <div class="col-md mb-3">
                     <label class="form-label">To</label>
-                    <select class="form-select">
-                        <option value="2">Dhaka</option>
-                        <option value="3">Beijing</option>
-                        <option value="4">Colombo</option>
-                        <option value="1">Sydney</option>
+                    <select class="form-select" id="locationTo">
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Beijing">Beijing</option>
+                        <option value="Colombo">Colombo</option>
+                        <option value="Kuala Lumpur">Kuala Lumpur</option>
                     </select>
                 </div>
 
                 <div class="col mb-3">
                     <label for="exampleInputEmail1" class="form-label">Depart Date</label>
-                    <input type="date" class="form-control">
+                    <input type="date" class="form-control" id="departDate">
                 </div>
 
                 <div class="col mb-3">
                     <label for="exampleInputEmail1" class="form-label">Return Date</label>
-                    <input type="date" class="form-control" >
+                    <input type="date" class="form-control" id="returnDate">
                 </div>
 
             </div>
@@ -112,21 +109,21 @@
             <div class="row">
                 <div class="col mb-3">
                     <label class="form-label">Class</label>
-                    <select class="form-select">
-                        <option value="1">Economy</option>
-                        <option value="2">Business</option>
-                        <option value="3">First</option>
+                    <select class="form-select" id="flightClass">
+                        <option value="Economy">Economy</option>
+                        <option value="Business">Business</option>
+                        <option value="First">First</option>
                     </select>
                 </div>
 
                 <div class="col mb-3">
                     <label class="form-label">Passengers</label>
-                    <input type="number" class="form-control">
+                    <input id="passengers" type="number" class="form-control">
                 </div>
 
 
                 <div class="col-md mb-3 mt-3 align-self-end">
-                    <button type="submit" class="btn btn-outline-light w-100"><b>SEARCH</b></button>
+                    <button type="submit" class="btn btn-outline-light w-100""><b>SEARCH</b></button>
                 </div>
             </div>
         </form>
@@ -230,5 +227,6 @@
 
         <!-- open source Bootstrap JS framework linked with CDN -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="js/book.js"></script>
     </body>
 </html>
