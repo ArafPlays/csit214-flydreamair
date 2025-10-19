@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- Page title-->
+        <title>FlyDreamAir Available Flights</title>
+        <!-- Custom CSS stylesheet-->
+         <link rel="stylesheet" href="css/meal.css">
+        <!-- open source Bootstrap V5 CSS framework linked with cdn -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- top navigation bar -->
+        <nav id="book-nav" class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="book.html">
+                    <img src="media/fda logo white bg dark red.png" width="200px"/>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Top Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sign Up</a>
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="container mt-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="available-flights.html">Select</a></li>
+                <li class="breadcrumb-item"><a href="personal-details.html">Details</a></li>
+                <li class="breadcrumb-item"><a href="seat-selection.html">Seat</a></li>
+                <li class="breadcrumb-item active"><a href="meal.html">Meal</a></li>
+                <li class="breadcrumb-item">Confirm</li>
+            </ol>
+        </nav>
+
+
+        <section class="container mt-4 px-4">
+            <h2 class="display-4">Choose Your Preferred Meal</h2>
+            <p>Enjoy your preferred meal at no extra charge.</p>
+        </section>
+
+
+
+        <section id="mealSection" class="container px-4 py-3">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="card">
+                    <img src="media/meal/skip.jpg" class="card-img-top">
+                    <div class="card-body mx-2">
+                        <h5 class="card-title">No Preference</h5>
+                        <p class="card-text">This option indicates the passenger has no specific dietary restrictions or requirements. The airline may serve the standard in-flight meal available to all passengers.</p>
+                        <button type="submit" class="btn btn-outline-danger w-100 mt-2"><b>SKIP</b></button>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="card">
+                        <img src="media/meal/halal.jpg" class="card-img-top">
+                    <div class="card-body mx-2">
+                        <h5 class="card-title">Halal Meal</h5>
+                        <p class="card-text">Prepared according to Islamic dietary laws, halal meals use ingredients and cooking methods permitted. They exclude pork, alcohol, and ensure meat is sourced in a prescribed manner.</p>
+                        <button type="submit" class="btn btn-outline-danger w-100 mt-2"><b>CONFIRM HALAL</b></button>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="card">
+                        <img src="media/meal/kosher.jpg" class="card-img-top">
+                    <div class="card-body mx-2">
+                        <h5 class="card-title">Kosher Meal</h5>
+                        <p class="card-text">Kosher meals follow Jewish dietary laws, ensuring food is prepared under rabbinical supervision. They exclude pork, shellfish, and prevent the mixing of meat and dairy products.</p>
+                        <button type="submit" class="btn btn-outline-danger w-100 mt-2"><b>CONFIRM KOSHER</b></button>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="card">
+                        <img src="media/meal/veg.jpg" class="card-img-top">
+                    <div class="card-body mx-2">
+                        <h5 class="card-title">Vegetarian Meal</h5>
+                        <p class="card-text">A vegetarian meal contains no meat, fish, or poultry and focuses on plant-based ingredients like vegetables, grains, and legumes. It is suitable for passengers who prefer or require a meat-free diet.</p>
+                        <button type="submit" class="btn btn-outline-danger w-100 mt-2"><b>CONFIRM VEG</b></button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- footer with logo and copyright message-->
+        <footer class="bg-body-tertiary text-center text-lg-start">
+            <div class="text-center p-3 mt-4" style="background-color:#910c00; color:white;">
+                <img src="media/fda logo white.png" width="200px"/>
+                © All Rights Reserved
+            </div>
+        </footer>
+
+
+        <!-- open source Bootstrap JS framework linked with CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="js/seat-selection.js"></script>
+    </body>
+</html>
