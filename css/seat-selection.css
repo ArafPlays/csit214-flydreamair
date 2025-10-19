@@ -1,0 +1,14 @@
+
+
+#seatSelector button {
+    border-color:#910c00;
+    color:#910c00;
+}
+#seatSelector button:hover {
+    color:white;
+}
+
+#seatSelector button:disabled{
+    color:gray;
+    border-color:gray;
+}

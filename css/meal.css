@@ -1,0 +1,10 @@
+#mealSection .card{
+    background-color: #F6F6F6!important;
+}
+#mealSection .card img{
+  height:200px;
+  object-fit: cover;
+}
+#mealSection .card-body {
+  padding:20px;
+}
