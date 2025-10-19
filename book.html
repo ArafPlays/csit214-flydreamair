@@ -76,7 +76,7 @@
             <div class="row">
                 <div class="col-md mb-3">
                     <label class="form-label">From</label>
-                    <select class="form-select" id="locationFrom">
+                    <select class="form-select" id="locationFrom" required>
                         <option value="Sydney">Sydney</option>
                         <option value="Dhaka">Dhaka</option>
                         <option value="Beijing">Beijing</option>
@@ -86,7 +86,7 @@
 
                 <div class="col-md mb-3">
                     <label class="form-label">To</label>
-                    <select class="form-select" id="locationTo">
+                    <select class="form-select" id="locationTo" required>
                         <option value="Dhaka">Dhaka</option>
                         <option value="Beijing">Beijing</option>
                         <option value="Colombo">Colombo</option>
@@ -96,12 +96,12 @@
 
                 <div class="col mb-3">
                     <label for="exampleInputEmail1" class="form-label">Depart Date</label>
-                    <input type="date" class="form-control" id="departDate">
+                    <input type="date" class="form-control" id="departDate" required>
                 </div>
 
                 <div class="col mb-3">
                     <label for="exampleInputEmail1" class="form-label">Return Date</label>
-                    <input type="date" class="form-control" id="returnDate">
+                    <input type="date" class="form-control" id="returnDate" required>
                 </div>
 
             </div>
@@ -109,7 +109,7 @@
             <div class="row">
                 <div class="col mb-3">
                     <label class="form-label">Class</label>
-                    <select class="form-select" id="flightClass">
+                    <select class="form-select" id="flightClass" required>
                         <option value="Economy">Economy</option>
                         <option value="Business">Business</option>
                         <option value="First">First</option>
@@ -118,12 +118,12 @@
 
                 <div class="col mb-3">
                     <label class="form-label">Passengers</label>
-                    <input id="passengers" type="number" class="form-control">
+                    <input id="passengers" type="number" class="form-control" required>
                 </div>
 
 
                 <div class="col-md mb-3 mt-3 align-self-end">
-                    <button type="submit" class="btn btn-outline-light w-100""><b>SEARCH</b></button>
+                    <button type="submit" class="btn btn-outline-light w-100"><b>SEARCH</b></button>
                 </div>
             </div>
         </form>
