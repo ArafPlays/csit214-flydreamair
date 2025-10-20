@@ -1,5 +1,7 @@
 UOW CSIT214 Group project
 
+- Start from book.html
+
 - We have used html, css, bootstrap and javascript
 
 - For storage purposes, we have used javascript localStorage, however in the future, a database should be implemented for best results
