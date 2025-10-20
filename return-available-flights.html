@@ -1,9 +1,14 @@
+<!-- we have used html, css, bootstrap and javascript -->
+<!-- for storage purposes, we have used javascript localStorage, however in the future, a database should be implemented for best results -->
+<!-- We used Bootstrap , an open-source CSS framework, to make the website responsive 
+    and to accelerate visual design using its pre-built classes and components (like navbar, card, carousel, accordion, modal). -->
+<!-- our code follows bootstrap 5.0 documentation with our own customization: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <!-- Page title-->
-        <title>FlyDreamAir Available Flights</title>
+        <title>FlyDreamAir Book Return Flight</title>
         <!-- Custom CSS stylesheet-->
         <link rel="stylesheet" type="text/css" href="css/return-available-flights.css">
         <!-- open source Bootstrap V5 CSS framework linked with cdn -->
@@ -16,16 +21,16 @@
                 <a class="navbar-brand" href="book.html">
                     <img src="media/fda logo white bg dark red.png" width="200px"/>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Top Destinations</a>
+                        <a class="nav-link" href="book.html#top-destinations">Top Destinations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">FAQ</a>
+                        <a class="nav-link" href="book.html#faq">FAQ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Login</a>
@@ -37,6 +42,8 @@
             </div>
         </nav>
 
+        <!-- bootstrap breadcrumbs so users can navigate easily -->
+         <!-- https://getbootstrap.com/docs/5.0/components/breadcrumb/ -->
         <nav class="container mt-4">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item active"><a href="#">Select</a></li>
@@ -47,15 +54,17 @@
             </ol>
         </nav>
 
+        <!-- page heading -->
         <section id="available-flights-header" class="container mt-4">
             <h2 id="availableTitle" class="display-4"></h2>
             <p>Return date: <span id="returnDate"></span></p>
+            <!-- change search button takes you back to the booking form -->
             <a href="book.html"><img src="media/arrow-return-left.svg"/> Change search</a>
         </section>
 
 
-        <!-- Local storage is being used to access details from the previous booking form.
-            Departure time, return time, flight number, duration, price values are currently hardcoded for UI purposes. 
+        <!-- Local storage is being used to access details (depart, return locations and dates, class) from the previous booking form.
+            Flight details like Departure time, return time, flight number, duration, price values are currently hardcoded for UI purposes. 
             A database should be set up in the future to pull in real time flight info -->
         <section class="container mt-5 mb-5">
             <div class="card px-4 py-4">
@@ -125,15 +134,13 @@
                         <p><b>$1300</b></p>
                     </div>
                     <div class="col d-flex align-self-center">
+                        <!-- select button saves flight info to LocalStorage using JS -->
                         <button id="flight3selected" class="flightSelectButton btn btn-outline-danger w-100 py-3"><b>SELECT</b></button>
                     </div>
                 </div>
             </div>
         </section>
     
-        
-        
-
 
         <!-- footer with logo and copyright message-->
         <footer class="bg-body-tertiary text-center text-lg-start">
@@ -143,9 +150,9 @@
             </div>
         </footer>
 
-
-        <!-- open source Bootstrap JS framework linked with CDN -->
+        <!-- Bootstrap, open source CSS framework linked with CDN -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Custom javascript code linked -->
         <script src="js/return-available-flights.js"></script>
     </body>
 </html>
