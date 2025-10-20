@@ -4,6 +4,7 @@ chosenFlightObj = JSON.parse(localStorage.getItem("flightSearchDetails"))
 document.getElementById("defaultChosen").addEventListener("click",function(e){
     e.preventDefault()
     
+    // meal preference is stored to localStorage
     chosenFlightObj.meal = "No Preference"
     localStorage.setItem("flightSearchDetails", JSON.stringify(chosenFlightObj))
 
@@ -13,6 +14,7 @@ document.getElementById("defaultChosen").addEventListener("click",function(e){
 document.getElementById("halalChosen").addEventListener("click",function(e){
     e.preventDefault()
 
+    // meal preference is stored to localStorage
     chosenFlightObj.meal = "Halal"
     localStorage.setItem("flightSearchDetails", JSON.stringify(chosenFlightObj))
 
@@ -23,6 +25,7 @@ document.getElementById("halalChosen").addEventListener("click",function(e){
 document.getElementById("kosherChosen").addEventListener("click",function(e){
     e.preventDefault()
 
+    // meal preference is stored to localStorage
     chosenFlightObj.meal = "Kosher"
     localStorage.setItem("flightSearchDetails", JSON.stringify(chosenFlightObj))
 
@@ -32,6 +35,7 @@ document.getElementById("kosherChosen").addEventListener("click",function(e){
 document.getElementById("vegChosen").addEventListener("click",function(e){
     e.preventDefault()
 
+    // meal preference is stored to localStorage
     chosenFlightObj.meal = "Vegetarian"
     localStorage.setItem("flightSearchDetails", JSON.stringify(chosenFlightObj))
 
