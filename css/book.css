@@ -1,13 +1,3 @@
-#actionButtons label.active {
-  background: #910c00;
-  border-color:#910c00
-}
-#actionButtons label {
-  border-color:#910c00
-}
-
-
-
 #bookCarousel img {
   height:350px;
   object-fit: cover;
@@ -34,6 +24,5 @@ form {
   object-fit: cover;
 }
 .card {
-  background:#910c00!important;
-  color:white!important;
+  background:#F6F6F6!important;
 }
