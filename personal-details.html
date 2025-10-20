@@ -13,7 +13,7 @@
         <!-- top navigation bar -->
         <nav id="book-nav" class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="book.html">
                     <img src="media/fda logo white bg dark red.png" width="200px"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,9 +21,6 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="book.html">Home</a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Top Destinations</a>
                     </li>
@@ -46,7 +43,7 @@
                 <li class="breadcrumb-item active"><a href="#">Details</a></li>
                 <li class="breadcrumb-item">Seat</li>
                 <li class="breadcrumb-item">Meal</li>
-                <li class="breadcrumb-item">Confirm</li>
+                <li class="breadcrumb-item">Payment</li>
             </ol>
         </nav>
 
@@ -57,55 +54,51 @@
         </section>
 
 
+        <!-- Javascript Local storage is being to save (and later access) these details
+         In the future, a database should be set up to store these details -->
         <form id="personalForm" class="container mt-4 mb-5 px-4">
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <label for="title-selector" class="form-label">Title</label>
-                    <select id="title-selector" class="form-select" required>
-                        <option>Mr.</option>
-                        <option>Mrs.</option>
-                        <option>Miss</option>
-                        <option>Dr.</option>
+                    <select id="titleSelector" class="form-select" required>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        <option value="Miss">Miss</option>
+                        <option value="Dr.">Dr.</option>
                     </select>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">First Name</label>
-                    <input type="text" class="form-control" required>
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input id="firstName" type="text" class="form-control" required>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" required>
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input id="lastName" type="lastName" class="form-control" required>
                 </div>
             </div>
-
-            <div>
-
-            </div>
-        
-
 
             <div class="row">
                 <div class="col-md mb-3">
-                    <label class="form-label">Nationality</label>
-                    <input type="text" class="form-control" required>
+                    <label for="nationality" class="form-label">Nationality</label>
+                    <input id="nationality" type="text" class="form-control" required>
                 </div>
                 <div class="col-md mb-3">
-                    <label class="form-label">Address</label>
-                    <input type="text" class="form-control" required>
+                    <label for="address" class="form-label">Address</label>
+                    <input id="address" type="text" class="form-control" required>
                 </div>
             </div>
 
             <div class="mb-3">
                 <p>Gender:</p>
                 <div class="form-check mb-3">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>
-                    <label class="form-check-label" for="flexRadioDefault1">
+                    <input value="Male" class="form-check-input" type="radio" name="gender" id="genderMaleInput" required>
+                    <label class="form-check-label" for="genderMaleInput">
                         Male
                     </label>
                 </div>
                 <div class="form-check mb-3">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" required>
-                    <label class="form-check-label" for="flexRadioDefault2">
+                    <input value="Female" class="form-check-input" type="radio" name="gender" id="genderFemaleInput" required>
+                    <label class="form-check-label" for="genderFemaleInput">
                         Female
                     </label>
                 </div>
