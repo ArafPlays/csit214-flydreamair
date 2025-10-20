@@ -1,0 +1,19 @@
+.card {
+  background:#F6F6F6!important;
+}
+
+.card p {
+  font-size:18px;
+}
+
+.card button {
+    border-color:#910c00!important;
+    
+}
+.card button a {
+    text-decoration: none;
+    color:#910c00!important;
+}
+.card button:hover a {
+    color:white!important;
+}
