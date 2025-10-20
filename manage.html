@@ -60,97 +60,109 @@
             </div>
        </section>
 
-       <!-- manage booking headline -->
-        <section class="container mt-5 px-4">
-            <h2 class="display-4">Manage Your Booking</h2>
-            <p>What would you like to do?</p>
+       <!-- show this section if booking is not yet done, logic handled by JS -->
+        <section id="bookingConfirmedNo">
+            <section class="container mt-5 px-4 py-5">
+                <h2 class="display-4">Please Make a Booking First..</h2>
+                <a href="book.html"><button class="btn btn-danger mt-4">Book Now</button></a>
+            </section>
         </section>
 
+       <!-- show this section if booking is already done, logic handled by JS -->
+        <section id="bookingConfirmedYes">
+        <!-- manage booking headline -->
+            <section class="container mt-5 px-4">
+                <h2 class="display-4">Manage Your Booking</h2>
+                <p>What would you like to do?</p>
+            </section>
 
-        <!-- change booking buttons -->
-        <!-- some of the buttons just take users to previous pages (like seat selection, meal selection, change flights) -->
-        <!-- For update contact info and request special assistance, 
-         modals have been used for users to quickly change their info / request assistance.
-         A form opens up when they click on the button and their inputs are recorded with localStorage
-         Bootstrap modal built in feature has been used to implement this: https://getbootstrap.com/docs/5.0/components/modal/ -->
-        <section id="mealSection" class="container px-4 py-3">
-            <div class="row">
-                <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card">
-                    <div class="card-body mx-2">
-                        <div class="card-text">
-                            <a href="confirmed.html"><button type="submit" class="btn btn-outline-danger mt-2 w-100"><b>View booking summary</b></button></a>
-                            <a href="available-flights.html"><button type="submit" class="btn btn-outline-danger mt-3 w-100"><b>Change flight(s)</b></button></a>
-                            <!-- Request Special Assistance Modal trigger button-->
-                            <button data-bs-toggle="modal" data-bs-target="#contactModal" type="submit" class="btn btn-outline-danger mt-3 w-100"><b>Update contact info</b></button>
-                            <a href="seat-selection.html"><button type="submit" class="btn btn-outline-danger mt-3 w-100"><b>Change seat</b></button></a>
-                            <a href="meal.html"><button type="submit" class="btn btn-outline-danger mt-3 w-100"><b>Change meal</b></button></a>
-                            <!-- Request Special Assistance Modal trigger button-->
-                            <button data-bs-toggle="modal" data-bs-target="#assistanceModal" type="submit" class="btn btn-outline-danger mt-3 w-100"><b>Request Special Assistance</b></button>
-                            <!-- cancel button clears the localstorage using javascript-->
-                            <button id="cancelBooking" type="submit" class="btn btn-outline-danger mt-3 mb-2 w-100"><b>Cancel booking</b></button>
+
+            <!-- change booking buttons -->
+            <!-- some of the buttons just take users to previous pages (like seat selection, meal selection, change flights) -->
+            <!-- For update contact info and request special assistance, 
+            modals have been used for users to quickly change their info / request assistance.
+            A form opens up when they click on the button and their inputs are recorded with localStorage
+            Bootstrap modal built in feature has been used to implement this: https://getbootstrap.com/docs/5.0/components/modal/ -->
+            <section id="mealSection" class="container px-4 py-3">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 mb-3">
+                        <div class="card">
+                        <div class="card-body mx-2">
+                            <div class="card-text">
+                                <a href="confirmed.html"><button type="submit" class="btn btn-outline-danger mt-2 w-100"><b>View booking summary</b></button></a>
+                                <a href="available-flights.html"><button type="submit" class="btn btn-outline-danger mt-3 w-100"><b>Change flight(s)</b></button></a>
+                                <!-- Request Special Assistance Modal trigger button-->
+                                <button data-bs-toggle="modal" data-bs-target="#contactModal" type="submit" class="btn btn-outline-danger mt-3 w-100"><b>Update contact info</b></button>
+                                <a href="seat-selection.html"><button type="submit" class="btn btn-outline-danger mt-3 w-100"><b>Change seat</b></button></a>
+                                <a href="meal.html"><button type="submit" class="btn btn-outline-danger mt-3 w-100"><b>Change meal</b></button></a>
+                                <!-- Request Special Assistance Modal trigger button-->
+                                <button data-bs-toggle="modal" data-bs-target="#assistanceModal" type="submit" class="btn btn-outline-danger mt-3 w-100"><b>Request Special Assistance</b></button>
+                                <!-- cancel button clears the localstorage using javascript-->
+                                <button id="cancelBooking" type="submit" class="btn btn-outline-danger mt-3 mb-2 w-100"><b>Cancel booking</b></button>
+                            </div>
                         </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Update contact info Modal -->
+            <div class="modal fade" id="contactModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Update contact info</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body px-4">
+                        <div class="mb-3">
+                            <label for="newEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="newEmail">
+                            </div>
+                            <div class="mb-3">
+                            <label for="newPhone" class="form-label">Phone number</label>
+                            <input class="form-control" id="newPhone" type="phone">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+                        <button id="updateContactInfo" type="button" class="btn btn-danger">Update info</button>
                     </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Update contact info Modal -->
-        <div class="modal fade" id="contactModal" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Update contact info</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body px-4">
-                    <div class="mb-3">
-                        <label for="newEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="newEmail">
+            <!-- Request Special Assistance Modal -->
+            <div class="modal fade" id="assistanceModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Request Special Assistance</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body px-4">
+                        <div class="mb-3">
+                            <label for="age" class="form-label">Your Age</label>
+                            <input type="number" class="form-control" id="age">
                         </div>
                         <div class="mb-3">
-                        <label for="newPhone" class="form-label">Phone number</label>
-                        <input class="form-control" id="newPhone" type="phone">
+                            <label for="assistanceType" class="form-label">What kind of assistance do you need?</label>
+                            <textarea class="form-control" id="assistanceType" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="age" class="form-label">Do you need language support?</label>
+                            <input type="number" class="form-control" id="text" placeholder="Y / N">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger">Request</button>
+                    </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
-                    <button id="updateContactInfo" type="button" class="btn btn-danger">Update info</button>
-                </div>
-                </div>
             </div>
-        </div>
 
-        <!-- Request Special Assistance Modal -->
-        <div class="modal fade" id="assistanceModal" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Request Special Assistance</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body px-4">
-                    <div class="mb-3">
-                        <label for="age" class="form-label">Your Age</label>
-                        <input type="number" class="form-control" id="age">
-                    </div>
-                    <div class="mb-3">
-                        <label for="assistanceType" class="form-label">What kind of assistance do you need?</label>
-                        <textarea class="form-control" id="assistanceType" rows="3"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="age" class="form-label">Do you need language support?</label>
-                        <input type="number" class="form-control" id="text" placeholder="Y / N">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-danger">Request</button>
-                </div>
-                </div>
-            </div>
-        </div>
+        </section>
         
 
         <!-- footer with logo and copyright message-->
