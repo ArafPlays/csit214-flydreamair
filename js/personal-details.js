@@ -1,5 +1,6 @@
 const personalForm = document.getElementById("personalForm")
 
+// when user submits the form, we store all the inputted values into localStorage.
 personalForm.addEventListener("submit",function(e){
     e.preventDefault()
 
