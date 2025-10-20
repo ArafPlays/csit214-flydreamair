@@ -1,9 +1,14 @@
+<!-- we have used html, css, bootstrap and javascript -->
+<!-- for storage purposes, we have used javascript localStorage, however in the future, a database should be implemented for best results -->
+<!-- We used Bootstrap , an open-source CSS framework, to make the website responsive 
+    and to accelerate visual design using its pre-built classes and components (like navbar, card, carousel, accordion, modal). -->
+<!-- our code follows bootstrap 5.0 documentation with our own customization: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <!-- Page title-->
-        <title>FlyDreamAir Available Flights</title>
+        <title>FlyDreamAir Make Payment</title>
         <!-- Custom CSS stylesheet-->
          <link rel="stylesheet" href="css/payment.css">
         <!-- open source Bootstrap V5 CSS framework linked with cdn -->
@@ -16,16 +21,16 @@
                 <a class="navbar-brand" href="book.html">
                     <img src="media/fda logo white bg dark red.png" width="200px"/>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Top Destinations</a>
+                        <a class="nav-link" href="book.html#top-destinations">Top Destinations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">FAQ</a>
+                        <a class="nav-link" href="book.html#faq">FAQ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Login</a>
@@ -37,6 +42,8 @@
             </div>
         </nav>
 
+        <!-- bootstrap breadcrumbs so users can navigate easily -->
+         <!-- https://getbootstrap.com/docs/5.0/components/breadcrumb/ -->
         <nav class="container mt-4">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="available-flights.html">Select</a></li>
@@ -47,14 +54,14 @@
             </ol>
         </nav>
 
-
+        <!-- page heading -->
         <section class="container mt-4 px-4">
             <h2 class="display-4">Check Details & Make Payment</h2>
             <p>Make sure all the details are correct and make payment to confirm.</p>
         </section>
 
 
-
+        <!-- JS localStorage is used to access and display details from previous inputs and forms -->
         <section id="summarySection" class="container px-4 py-3">
             <div class="row">
                 <div class="col-md-6 col-lg-3 mb-3">
@@ -73,6 +80,8 @@
                             Meal: <span id="mealChosen"></span><br>
                             </p>
                             
+                            <!-- return flight details div will be shown if user has selected a return date, this logic is handled by JS -->
+                            <!-- this div will be hidden by JS if user kept return date blank in original booking form -->
                             <div id="returnFlightDetails">
                                 
                                 <hr>
@@ -109,6 +118,7 @@
                     <div class="card">
                         <div class="card-body mx-2">
                             <h5 class="card-title">Fee Breakdown</h5>
+                            <!-- flight cost is calculated dynamically from user selected flights -->
                             <p>
                                 Departure flight Cost: $<span id="flightCost"></span><br>
                                 <span id="returnFlightCostSection">Return flight Cost: $<span id="returnflightCost">0</span></span><br><br>
@@ -123,6 +133,7 @@
                         <div class="card-body mx-2">
                             <h5 class="card-title">Payment</h5>
                             <p class="card-text">
+                                <!-- credit card payment form -->
                                 <form id="paymentForm">
                                     <div class="mb-3">
                                         <label for="cardnumber" class="form-label">Card number</label>
