@@ -43,7 +43,7 @@
                 <li class="breadcrumb-item"><a href="personal-details.html">Details</a></li>
                 <li class="breadcrumb-item"><a href="seat-selection.html">Seat</a></li>
                 <li class="breadcrumb-item active"><a href="meal.html">Meal</a></li>
-                <li class="breadcrumb-item">Confirm</li>
+                <li class="breadcrumb-item">Payment</li>
             </ol>
         </nav>
 
@@ -63,7 +63,7 @@
                     <div class="card-body mx-2">
                         <h5 class="card-title">No Preference</h5>
                         <p class="card-text">This option indicates the passenger has no specific dietary restrictions or requirements. The airline may serve the standard in-flight meal available to all passengers.</p>
-                        <button type="submit" class="btn btn-outline-danger w-100 mt-2"><b>SKIP</b></button>
+                        <button id="defaultChosen" type="submit" class="btn btn-outline-danger w-100 mt-2"><b>CHOOSE DEFAULT</b></button>
                     </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                     <div class="card-body mx-2">
                         <h5 class="card-title">Halal Meal</h5>
                         <p class="card-text">Prepared according to Islamic dietary laws, halal meals use ingredients and cooking methods permitted. They exclude pork, alcohol, and ensure meat is sourced in a prescribed manner.</p>
-                        <button type="submit" class="btn btn-outline-danger w-100 mt-2"><b>CONFIRM HALAL</b></button>
+                        <button id="halalChosen" type="submit" class="btn btn-outline-danger w-100 mt-2"><b>CONFIRM HALAL</b></button>
                     </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                     <div class="card-body mx-2">
                         <h5 class="card-title">Kosher Meal</h5>
                         <p class="card-text">Kosher meals follow Jewish dietary laws, ensuring food is prepared under rabbinical supervision. They exclude pork, shellfish, and prevent the mixing of meat and dairy products.</p>
-                        <button type="submit" class="btn btn-outline-danger w-100 mt-2"><b>CONFIRM KOSHER</b></button>
+                        <button id="kosherChosen" type="submit" class="btn btn-outline-danger w-100 mt-2"><b>CONFIRM KOSHER</b></button>
                     </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                     <div class="card-body mx-2">
                         <h5 class="card-title">Vegetarian Meal</h5>
                         <p class="card-text">A vegetarian meal contains no meat, fish, or poultry and focuses on plant-based ingredients like vegetables, grains, and legumes. It is suitable for passengers who prefer or require a meat-free diet.</p>
-                        <button type="submit" class="btn btn-outline-danger w-100 mt-2"><b>CONFIRM VEG</b></button>
+                        <button id="vegChosen" type="submit" class="btn btn-outline-danger w-100 mt-2"><b>CONFIRM VEG</b></button>
                     </div>
                     </div>
                 </div>
@@ -112,6 +112,6 @@
 
         <!-- open source Bootstrap JS framework linked with CDN -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <script src="js/seat-selection.js"></script>
+        <script src="js/meal.js"></script>
     </body>
 </html>
