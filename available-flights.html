@@ -1,3 +1,8 @@
+<!-- we have used html, css, bootstrap and javascript -->
+<!-- for storage purposes, we have used javascript localStorage, however in the future, a database should be implemented for best results -->
+<!-- We used Bootstrap , an open-source CSS framework, to make the website responsive 
+    and to accelerate visual design using its pre-built classes and components (like navbar, card, carousel, accordion, modal). -->
+<!-- our code follows bootstrap 5.0 documentation with our own customization: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,12 +16,13 @@
     </head>
     <body>
         <!-- top navigation bar -->
+         <!-- navbar bootstrap doc: https://getbootstrap.com/docs/5.0/components/navbar/ -->
         <nav id="book-nav" class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="book.html">
                     <img src="media/fda logo white bg dark red.png" width="200px"/>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -37,6 +43,8 @@
             </div>
         </nav>
 
+        <!--  breadcrumbs so users can navigate easily -->
+         <!-- https://getbootstrap.com/docs/5.0/components/breadcrumb/ -->
         <nav class="container mt-4">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item active"><a href="#">Select</a></li>
@@ -47,9 +55,11 @@
             </ol>
         </nav>
 
+        <!-- page heading -->
         <section id="available-flights-header" class="container mt-4">
             <h2 id="availableTitle" class="display-4"></h2>
             <p>Depart date: <span class="departDate"></span></p>
+            <!-- change search button takes you back to the booking form -->
             <a href="book.html"><img src="media/arrow-return-left.svg"/> Change search</a>
         </section>
 
@@ -131,10 +141,6 @@
             </div>
         </section>
     
-        
-        
-
-
         <!-- footer with logo and copyright message-->
         <footer class="bg-body-tertiary text-center text-lg-start">
             <div class="text-center p-3 mt-4" style="background-color:#910c00; color:white;">
@@ -144,8 +150,9 @@
         </footer>
 
 
-        <!-- open source Bootstrap JS framework linked with CDN -->
+        <!-- Bootstrap, open source CSS framework linked with CDN -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Custom javascript code linked -->
         <script src="js/available-flights.js"></script>
     </body>
 </html>
