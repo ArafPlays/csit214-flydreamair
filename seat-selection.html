@@ -1,9 +1,14 @@
+<!-- we have used html, css, bootstrap and javascript -->
+<!-- for storage purposes, we have used javascript localStorage, however in the future, a database should be implemented for best results -->
+<!-- We used Bootstrap , an open-source CSS framework, to make the website responsive 
+    and to accelerate visual design using its pre-built classes and components (like navbar, card, carousel, accordion, modal). -->
+<!-- our code follows bootstrap 5.0 documentation with our own customization: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <!-- Page title-->
-        <title>FlyDreamAir Available Flights</title>
+        <title>FlyDreamAir Seat Selection</title>
         <!-- Custom CSS stylesheet-->
          <link rel="stylesheet" href="css/seat-selection.css">
         <!-- open source Bootstrap V5 CSS framework linked with cdn -->
@@ -16,17 +21,18 @@
                 <a class="navbar-brand" href="book.html">
                     <img src="media/fda logo white bg dark red.png" width="200px"/>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Top Destinations</a>
+                        <a class="nav-link" href="book.html#topDestinations">Top Destinations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">FAQ</a>
+                        <a class="nav-link" href="book.html#faq">FAQ</a>
                     </li>
+                    <!-- login and sign up functionality not supported at this moment. -->
                     <li class="nav-item">
                         <a class="nav-link" href="#">Login</a>
                     </li>
@@ -37,6 +43,8 @@
             </div>
         </nav>
 
+        <!-- bootstrap breadcrumbs so users can navigate easily -->
+         <!-- https://getbootstrap.com/docs/5.0/components/breadcrumb/ -->
         <nav class="container mt-4">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="available-flights.html">Select</a></li>
@@ -47,14 +55,16 @@
             </ol>
         </nav>
 
-
+        <!-- page heading -->
         <section class="container mt-4 px-4">
             <h2 class="display-4">Choose Your Preferred Seat</h2>
             <p>Enjoy your favorite seat at no extra.</p>
         </section>
 
 
-
+        <!-- In the future, database should tell us what seats are available for the aircraft.
+         For demonstration purposes, we have randomly disabled a few buttons (seats) and the rest of the seats are available -->
+         <!-- seat selection is responsive except on very small devices -->
         <section id="seatSelector" class="container w-md-50 mt-5">
             <div class="mb-5">
                 <p style="text-align:center">Front of Airplane</p>
@@ -182,6 +192,7 @@
             </div>
         </section>
 
+        <!-- confirm seat buttons record the last clicked on seat number and saves it to localStorage using JS-->
         <div class="d-flex justify-content-center mt-4 mb-5">
             <button id="confirmSeat" type="submit" class="btn btn-outline-danger"><b>CONFIRM SEAT</b></button>
         </div>
@@ -197,8 +208,9 @@
         </footer>
 
 
-        <!-- open source Bootstrap JS framework linked with CDN -->
+        <!-- Bootstrap, open source CSS framework linked with CDN -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Custom javascript code linked -->
         <script src="js/seat-selection.js"></script>
     </body>
 </html>
