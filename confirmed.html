@@ -38,22 +38,22 @@
         </nav>
 
 
-        <section class="container mt-5 mb-4 px-4">
-            <h2 class="display-4">Booking Confirmed</h2>
+        <section class="container mt-5 px-4">
+            <h2 class="display-4">Booking Confirmation</h2>
             <p>Thank you for choosing Fly Dream Airlines.</p>
         </section>
 
 
 
-        <section id="summarySection" class="container px-4 py-3 mb-5">
+        <section id="summarySection" class="container px-4 py-3">
             <div class="row">
                 <div class="col-md-6 col-lg-3 mb-3">
                     <div class="card">
-                        <div class="card-body mx-2">
+                        <div class="card-body mx-2 mb-3">
                             <h5 class="card-title">Downloadables</h5>
                             <p class="card-text">
-                                <button type="submit" class="btn btn-danger mt-3"><b>Download receipt</b></button>
-                                <button type="submit" class="btn btn-danger mt-3 mb-3"><b>Download e-ticket</b></button>
+                                <button type="submit" class="btn btn-danger mt-3"><b>Download invoice</b></button>
+                                <button type="submit" class="btn btn-danger mt-3"><b>Download e-ticket</b></button>
                             </p>
                         </div>
                     </div>
@@ -61,17 +61,33 @@
                 <div class="col-md-6 col-lg-3 mb-3">
                     <div class="card">
                         <div class="card-body mx-2">
-                            <h5 class="card-title">Flight Summary</h5>
+                            <h5 class="card-title">Travel Summary</h5>
                             <p class="card-text">
-                            From: <br>
-                            To: <br>
-                            Flight Number:<br>
-                            Departure: <br>
-                            Arrival:<br>
-                            Class:<br>
-                            Seat number:<br>
-                            Meal:<br>
+                            <i>DEPARTURE FLIGHT</i><br>
+                            <span id="flightFrom"></span> to <span id="flightTo"></span><br>
+                            Flight Number: <span id="flightNumber"></span><br>
+                            Flight Date: <span id="departDay"></span><br>
+                            Departure time: <span id="departTime"></span><br>
+                            Arrival time: <span id="arrivalTime"></span><br>
+                            Class: <span id="flightClass"></span><br>
+                            Seat number: <span id="seatChosen"></span><br>
+                            Meal: <span id="mealChosen"></span><br>
                             </p>
+                            
+                            <div id="returnFlightDetails">
+                                
+                                <hr>
+                                <i>RETURN FLIGHT</i><br>
+                                <span id="returnflightFrom"></span> to <span id="returnflightTo"></span><br>
+                                Flight Number: <span id="returnflightNumber"></span><br>
+                                Flight Date: <span id="returnDay"></span><br>
+                                Departure time: <span id="returndepartTime"></span><br>
+                                Arrival time: <span id="returnarrivalTime"></span><br>
+                                Class: <span id="returnflightClass"></span><br>
+                                Seat number: <span id="returnseatChosen"></span><br>
+                                Meal: <span id="returnmealChosen"></span><br>
+                            </div>
+                                
                         </div>
                     </div>
                 </div>
@@ -81,11 +97,11 @@
                         <h5 class="card-title">Passenger Summary</h5>
                         <p class="card-text">
                             <p>
-                            Title: <br>
-                            First name: <br>
-                            Last name:<br>
-                            Phone: <br>
-                            Email: </p>
+                            Title: <span id="passengerTitle"></span><br>
+                            First name: <span id="passengerFirstName"></span><br>
+                            Last name: <span id="passengerLastName"></span><br>
+                            Phone: <span id="passengerPhone"></span><br>
+                            Email: <span id="passengerEmail"></span></p>
                         </p>
                     </div>
                     </div>
@@ -93,15 +109,13 @@
                 <div class="col-md-6 col-lg-3 mb-3">
                     <div class="card">
                         <div class="card-body mx-2">
-                            <h5 class="card-title">Payment Info</h5>
+                            <h5 class="card-title">Fee Breakdown</h5>
                             <p>
-                                Flight cost: $789<br>
-                                Seat selection: $0<br>
-                                Meal: $0<br>
-                                Taxes: $0<br>
-                                Airport charges: $0<br><br>
-                                <b ><i style="color:#910c00;font-size:18px;">Total Paid: $789</i></b><br>
-                                Paid with credit card.
+                                Departure flight Cost: $<span id="flightCost"></span><br>
+                                <span id="returnFlightCostSection">Return flight Cost: $<span id="returnflightCost">0</span></span><br><br>
+                            
+                                <b ><i style="color:#910c00;font-size:18px;">Total Paid: $<span id="totalDue"></i></b><br>
+                                    Paid with credit card.
                             </p>
                         </div>
                     </div>
@@ -121,6 +135,6 @@
 
         <!-- open source Bootstrap JS framework linked with CDN -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <script src="js/seat-selection.js"></script>
+        <script src="js/payment.js"></script>
     </body>
 </html>
