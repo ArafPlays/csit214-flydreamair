@@ -36,9 +36,6 @@ if(chosenFlightObj["return"] != ""){
     document.getElementById("totalDue").innerHTML = chosenFlightObj["price"]
 }
 
-
-
-
 /* getting personal details from local storage and adding it to passenger summary section */
 personDetailsObj = JSON.parse(localStorage.getItem("personalDetails"))
 console.log(personDetailsObj)
