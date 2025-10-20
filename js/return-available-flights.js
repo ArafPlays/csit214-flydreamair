@@ -1,13 +1,15 @@
-
+// Retrieve stored flight search details from localStorage and parse it back into an object
 flightDetailsObj = JSON.parse(localStorage.getItem("flightSearchDetails"))
 
 console.log(flightDetailsObj)
 
+// Update the main title to show the selected route
 document.getElementById("availableTitle").innerHTML = "Choose Your Return flight from " + flightDetailsObj["to"]+ " to " + flightDetailsObj["from"]
 
 
 document.getElementById("returnDate").innerHTML = flightDetailsObj["return"];
 
+// Using loops to populate details from the previous booking form
 const departLocationHTML = document.getElementsByClassName("departLocationHTML")
 for (let element of departLocationHTML) {
   element.innerHTML = flightDetailsObj["from"];
