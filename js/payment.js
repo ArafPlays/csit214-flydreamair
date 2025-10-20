@@ -49,5 +49,8 @@ document.getElementById("passengerEmail").innerHTML = personDetailsObj["contactE
 
 document.getElementById("paymentForm").addEventListener("submit",function(e){
     e.preventDefault()
+    // we add a localStorage key bookingConfirmed, this will be used on the booking manage page to check if a booking exists.
+    localStorage.setItem("bookingConfirmed","yes")
     window.location.href="confirmed.html"
 })
+
