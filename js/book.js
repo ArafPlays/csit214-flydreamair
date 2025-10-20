@@ -9,11 +9,9 @@ searchForm.addEventListener("submit",function(e){
     const departDate = document.getElementById("departDate").value
     const returnDate = document.getElementById("returnDate").value
     const flightClass = document.getElementById("flightClass").value
-    const passengers = document.getElementById("passengers").value
 
 
-
-    localStorage.setItem("flightSearchDetails", JSON.stringify({"from":locationFrom,"to":locationTo,"depart":departDate,"return":returnDate,"fClass":flightClass,"passengers":passengers}))
+    localStorage.setItem("flightSearchDetails", JSON.stringify({"from":locationFrom,"to":locationTo,"depart":departDate,"return":returnDate,"fClass":flightClass}))
     
     window.location.href="available-flights.html"
 })
