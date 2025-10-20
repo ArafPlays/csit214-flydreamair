@@ -1,11 +1,12 @@
-
+// Retrieve stored flight search details from localStorage and parse it back into an object
 flightDetailsObj = JSON.parse(localStorage.getItem("flightSearchDetails"))
 
 console.log(flightDetailsObj)
 
+// Update the main title to show the selected route
 document.getElementById("availableTitle").innerHTML = "Departure flights from " + flightDetailsObj["from"]+ " to " + flightDetailsObj["to"]
 
-
+// Using loops to populate details from the previous booking form
 const departDate = document.getElementsByClassName("departDate");
 for (let element of departDate) {
   element.innerHTML = flightDetailsObj["depart"];
@@ -39,8 +40,11 @@ flight1Button.addEventListener("click",function(e){
   flightDetailsObj.duration = "7h 35m"
   flightDetailsObj.price = 728
 
+  // flight details are stored to LocalStorage for later access
   localStorage.setItem("flightSearchDetails", JSON.stringify(flightDetailsObj))
     
+  // if a return date is chosen in the previous booking form, we go to the return flight selection page
+  // if return date is kept empty on the form, we go straight to filling in user personal details.
   if(flightDetailsObj["return"] != ""){
     window.location.href="return-available-flights.html"
   } else {
@@ -59,8 +63,11 @@ flight2Button.addEventListener("click",function(e){
   flightDetailsObj.duration = "5h 35m"
   flightDetailsObj.price = 927
 
+  // flight details are stored to LocalStorage for later access
   localStorage.setItem("flightSearchDetails", JSON.stringify(flightDetailsObj))
     
+  // if a return date is chosen in the previous booking form, we go to the return flight selection page
+  // if return date is kept empty on the form, we go straight to filling in user personal details.
   if(flightDetailsObj["return"] != ""){
     window.location.href="return-available-flights.html"
   } else {
@@ -79,14 +86,16 @@ flight3Button.addEventListener("click",function(e){
   flightDetailsObj.duration = "4h 35m"
   flightDetailsObj.price = 1300
 
+  // flight details are stored to LocalStorage for later access
   localStorage.setItem("flightSearchDetails", JSON.stringify(flightDetailsObj))
   
+  // if a return date is chosen in the previous booking form, we go to the return flight selection page
+  // if return date is kept empty on the form, we go straight to filling in user personal details.
   if(flightDetailsObj["return"] != ""){
     window.location.href="return-available-flights.html"
   } else {
     window.location.href="personal-details.html"
   }
-  
 })
 
 
