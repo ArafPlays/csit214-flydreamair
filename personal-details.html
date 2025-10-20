@@ -1,9 +1,14 @@
+<!-- we have used html, css, bootstrap and javascript -->
+<!-- for storage purposes, we have used javascript localStorage, however in the future, a database should be implemented for best results -->
+<!-- We used Bootstrap , an open-source CSS framework, to make the website responsive 
+    and to accelerate visual design using its pre-built classes and components (like navbar, card, carousel, accordion, modal). -->
+<!-- our code follows bootstrap 5.0 documentation with our own customization: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <!-- Page title-->
-        <title>FlyDreamAir Available Flights</title>
+        <title>FlyDreamAir Fill in Personal Details</title>
         <!-- Custom CSS stylesheet-->
         <link rel="stylesheet" type="text/css" href="css/available-flights.css">
         <!-- open source Bootstrap V5 CSS framework linked with cdn -->
@@ -22,10 +27,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Top Destinations</a>
+                        <a class="nav-link" href="book.html#top-destinations">Top Destinations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">FAQ</a>
+                        <a class="nav-link" href="book.html#faq">FAQ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Login</a>
@@ -37,6 +42,8 @@
             </div>
         </nav>
 
+        <!-- bootstrap breadcrumbs so users can navigate easily -->
+         <!-- https://getbootstrap.com/docs/5.0/components/breadcrumb/ -->
         <nav class="container mt-4">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="available-flights.html">Select</a></li>
@@ -47,15 +54,16 @@
             </ol>
         </nav>
 
-
+        <!-- page heading -->
         <section class="container mt-4 px-4">
             <h2 class="display-4">Personal Details</h2>
             <p>Please put in your personal details exactly like your government issued passport.</p>
         </section>
 
 
-        <!-- Javascript Local storage is being to save (and later access) these details
+        <!-- Javascript Local storage is being to save (and later access) these personal details
          In the future, a database should be set up to store these details -->
+        <!-- Bootstrap pre-built form classes have been used for visual and responsive purposes: https://getbootstrap.com/docs/5.0/forms/overview/-->
         <form id="personalForm" class="container mt-4 mb-5 px-4">
             <div class="row">
                 <div class="col-md-4 mb-3">
@@ -103,10 +111,8 @@
                     </label>
                 </div>
             </div>
-
             
-            
-            
+            <!-- collecting contact details -->
             <p class="mt-4 mb-4"><img src="media/telephone.svg"/> Contact Details</p>
 
             <div class="row">
@@ -138,8 +144,9 @@
         </footer>
 
 
-        <!-- open source Bootstrap JS framework linked with CDN -->
+        <!-- Bootstrap, open source CSS framework linked with CDN -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Custom javascript code linked -->
         <script src="js/personal-details.js"></script>
     </body>
 </html>
