@@ -1,3 +1,5 @@
+/* we use pre-built bootstrap for visual and responsiveness purposes.
+However some custom CSS is done below for greater visual control and customization */
 #bookCarousel img {
   height:350px;
   object-fit: cover;
