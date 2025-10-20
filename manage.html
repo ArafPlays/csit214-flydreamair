@@ -1,3 +1,8 @@
+<!-- we have used html, css, bootstrap and javascript -->
+<!-- for storage purposes, we have used javascript localStorage, however in the future, a database should be implemented for best results -->
+<!-- We used Bootstrap , an open-source CSS framework, to make the website responsive 
+    and to accelerate visual design using its pre-built classes and components (like navbar, card, carousel, accordion, modal). -->
+<!-- our code follows bootstrap 5.0 documentation with our own customization: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,16 +21,16 @@
                 <a class="navbar-brand" href="book.html">
                     <img src="media/fda logo white bg dark red.png" width="200px"/>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Top Destinations</a>
+                        <a class="nav-link" href="book.html#top-destinations">Top Destinations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">FAQ</a>
+                        <a class="nav-link" href="book.html#faq">FAQ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Login</a>
@@ -40,12 +45,13 @@
         <!-- top action buttons (Book, manage, check-in, status)-->
         <section id="actionButtons">
             <div class="btn-group d-flex justify-content-center" role="group">
+                <!-- Booking and manage booking features have been successfully implemented -->
                 <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" >
                 <label onclick="location.href='book.html'" class="btn btn-outline-danger rounded-0" for="btnradio1">Book</label>
 
                 <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" checked>
                 <label onclick="location.href='manage.html'" class="btn btn-outline-danger rounded-0 active" for="btnradio2">Manage</label>
-
+                <!-- check-in and flight status have not been implemented yet -->
                 <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
                 <label class="btn btn-outline-danger rounded-0" for="btnradio3">Check-in</label>
 
@@ -62,6 +68,11 @@
 
 
         <!-- change booking buttons -->
+        <!-- some of the buttons just take users to previous pages (like seat selection, meal selection, change flights) -->
+        <!-- For update contact info and request special assistance, 
+         modals have been used for users to quickly change their info / request assistance.
+         A form opens up when they click on the button and their inputs are recorded with localStorage
+         Bootstrap modal built in feature has been used to implement this: https://getbootstrap.com/docs/5.0/components/modal/ -->
         <section id="mealSection" class="container px-4 py-3">
             <div class="row">
                 <div class="col-md-6 col-lg-3 mb-3">
@@ -151,8 +162,9 @@
         </footer>
 
 
-        <!-- open source Bootstrap JS framework linked with CDN -->
+        <!-- Bootstrap, open source CSS framework linked with CDN -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Custom javascript code linked -->
         <script src="js/manage.js"></script>
     </body>
 </html>
