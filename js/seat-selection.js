@@ -20,7 +20,7 @@ for (var i = 0; i < allButtons.length; i++) {
     // Show it in the console (for testing purposes)
     console.log(buttonText)
     
-    // change
+     // change color of selected seat when clicked
     for(i=0;i<allButtons.length;i++){
       allButtons[i].style.backgroundColor ='white'
       allButtons[i].style.color ='black'
@@ -32,3 +32,4 @@ for (var i = 0; i < allButtons.length; i++) {
     
   })
 }
+
