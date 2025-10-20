@@ -1,9 +1,14 @@
+<!-- we have used html, css, bootstrap and javascript -->
+<!-- for storage purposes, we have used javascript localStorage, however in the future, a database should be implemented for best results -->
+<!-- We used Bootstrap , an open-source CSS framework, to make the website responsive 
+    and to accelerate visual design using its pre-built classes and components (like navbar, card, carousel, accordion, modal). -->
+<!-- our code follows bootstrap 5.0 documentation with our own customization: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <!-- Page title-->
-        <title>FlyDreamAir Available Flights</title>
+        <title>FlyDreamAir Meal Selection</title>
         <!-- Custom CSS stylesheet-->
          <link rel="stylesheet" href="css/meal.css">
         <!-- open source Bootstrap V5 CSS framework linked with cdn -->
@@ -16,16 +21,16 @@
                 <a class="navbar-brand" href="book.html">
                     <img src="media/fda logo white bg dark red.png" width="200px"/>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Top Destinations</a>
+                        <a class="nav-link" href="book.html#top-destinations">Top Destinations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">FAQ</a>
+                        <a class="nav-link" href="book.html#faq">FAQ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Login</a>
@@ -37,6 +42,8 @@
             </div>
         </nav>
 
+        <!-- bootstrap breadcrumbs so users can navigate easily -->
+         <!-- https://getbootstrap.com/docs/5.0/components/breadcrumb/ -->
         <nav class="container mt-4">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="available-flights.html">Select</a></li>
@@ -47,14 +54,15 @@
             </ol>
         </nav>
 
-
+        <!-- page heading -->
         <section class="container mt-4 px-4">
             <h2 class="display-4">Choose Your Preferred Meal</h2>
             <p>Enjoy your preferred meal at no extra charge.</p>
         </section>
 
 
-
+        <!-- Bootstrap cards have been used on this section for visual appeal and responsiveness: https://getbootstrap.com/docs/5.0/components/card/ -->
+        <!-- JS localStorage records their choice and then later shows it in the booking summary -->
         <section id="mealSection" class="container px-4 py-3">
             <div class="row">
                 <div class="col-md-6 col-lg-3 mb-3">
