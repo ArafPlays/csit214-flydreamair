@@ -1,3 +1,13 @@
+// if a booking exists (we check localStorage), then we show a manage booking section
+// if booking doesn't exist, we show a message that tells me to make a booking first.
+const isConfirmed = localStorage.getItem("bookingConfirmed")
+if(isConfirmed == "yes"){
+    document.getElementById("bookingConfirmedNo").innerHTML = ""
+} else {
+    document.getElementById("bookingConfirmedYes").innerHTML = ""
+}
+
+
 /* clears local storage when cancel booking button is clicked" 
     This clears all booking data and personal details */
 cancelButton = document.getElementById("cancelBooking")
