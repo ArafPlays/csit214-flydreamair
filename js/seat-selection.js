@@ -1,4 +1,6 @@
-document.getElementById("confirmSeat").addEventListener("click",function(e){
+confirmSeat = document.getElementById("confirmSeat")
+
+confirmSeat.addEventListener("click",function(e){
     e.preventDefault()
     // Save chosen seat to localStorage
     localStorage.setItem("chosenSeat", buttonText);
@@ -18,6 +20,15 @@ for (var i = 0; i < allButtons.length; i++) {
     // Show it in the console (for testing purposes)
     console.log(buttonText)
     
+    // change
+    for(i=0;i<allButtons.length;i++){
+      allButtons[i].style.backgroundColor ='white'
+      allButtons[i].style.color ='black'
+      confirmSeat.style.color="#910c00"
+    }
+    
+    event.target.style.backgroundColor = "#910c00"
+    event.target.style.color = "white"
+    
   })
 }
-
