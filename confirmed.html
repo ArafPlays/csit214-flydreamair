@@ -1,9 +1,14 @@
+<!-- we have used html, css, bootstrap and javascript -->
+<!-- for storage purposes, we have used javascript localStorage, however in the future, a database should be implemented for best results -->
+<!-- We used Bootstrap , an open-source CSS framework, to make the website responsive 
+    and to accelerate visual design using its pre-built classes and components (like navbar, card, carousel, accordion, modal). -->
+<!-- our code follows bootstrap 5.0 documentation with our own customization: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <!-- Page title-->
-        <title>FlyDreamAir Available Flights</title>
+        <title>FlyDreamAir Booking Confirmation</title>
         <!-- Custom CSS stylesheet-->
          <link rel="stylesheet" href="css/payment.css">
         <!-- open source Bootstrap V5 CSS framework linked with cdn -->
@@ -11,6 +16,7 @@
     </head>
     <body>
         <!-- top navigation bar -->
+        <!-- navbar bootstrap doc: https://getbootstrap.com/docs/5.0/components/navbar/ -->
         <nav id="book-nav" class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="book.html">
@@ -37,7 +43,7 @@
             </div>
         </nav>
 
-
+        <!-- page header -->
         <section class="container mt-5 px-4">
             <h2 class="display-4">Booking Confirmation</h2>
             <p>Thank you for choosing Fly Dream Airlines.</p>
@@ -52,12 +58,14 @@
                         <div class="card-body mx-2 mb-3">
                             <h5 class="card-title">Downloadables</h5>
                             <p class="card-text">
+                                <!-- downloading these documents have not been implemented yet, we would need a database for this -->
                                 <button type="submit" class="btn btn-danger mt-3"><b>Download invoice</b></button>
                                 <button type="submit" class="btn btn-danger mt-3"><b>Download e-ticket</b></button>
                             </p>
                         </div>
                     </div>
                 </div>
+                <!-- We access localStorage to retrive previous user inputs and selections, then we display these details here -->
                 <div class="col-md-6 col-lg-3 mb-3">
                     <div class="card">
                         <div class="card-body mx-2">
@@ -135,6 +143,7 @@
 
         <!-- open source Bootstrap JS framework linked with CDN -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Custom javascript code linked -->
         <script src="js/payment.js"></script>
     </body>
 </html>
